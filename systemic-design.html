@@ -12,8 +12,15 @@
 <body>
 
 <nav class="site-nav">
+  <input type="checkbox" id="nav-toggle" class="site-nav__toggle" aria-label="Open navigation menu">
+  <label for="nav-toggle" class="site-nav__backdrop" aria-hidden="true"></label>
   <div class="site-nav__inner">
     <a class="site-nav__brand" href="index.html">ESN Connect <em>· Group 5</em></a>
+    <label for="nav-toggle" class="site-nav__burger" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
     <ul class="site-nav__links">
       <li><a href="index.html">Home</a></li>
       <li><a href="research-question.html">Research</a></li>
