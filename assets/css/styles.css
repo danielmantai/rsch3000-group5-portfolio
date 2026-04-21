@@ -1,0 +1,492 @@
+/* ==========================================================================
+   RSCH3000 Group 5 Portfolio — Editorial Aesthetic
+   Visually distinct from the ESNConnect prototype (institutional blue + gold).
+   Anchor: deep navy ink + muted terracotta accent, cream paper background,
+   serif display (Fraunces) + sans body (Inter Tight).
+   ========================================================================== */
+
+:root {
+  --ink: #0b2545;
+  --ink-soft: #1f3a5f;
+  --paper: #faf6f0;
+  --paper-deep: #f2ebdc;
+  --rule: #d9d2c3;
+  --accent: #c65f4f;
+  --accent-soft: #e4a59b;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --ai-blue: #2563c8;
+
+  --serif: "Fraunces", "Source Serif Pro", Georgia, serif;
+  --sans: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --read-width: 42rem;
+  --wide-width: 64rem;
+  --nav-h: 3.5rem;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 120ms ease;
+}
+a:hover { color: var(--accent); }
+
+/* ---------- Top nav ---------- */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  backdrop-filter: saturate(1.2);
+}
+
+.site-nav__inner {
+  max-width: var(--wide-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-nav__brand {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav__brand em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.site-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.site-nav__links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+}
+.site-nav__links a:hover,
+.site-nav__links a[aria-current="page"] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Page header ---------- */
+
+.page-header {
+  max-width: var(--wide-width);
+  margin: 0 auto;
+  padding: 5rem 1.5rem 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.page-header__eyebrow {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1rem;
+  font-weight: 500;
+}
+
+.page-header h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  max-width: 48rem;
+}
+
+.page-header__lead {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 40rem;
+  margin: 0;
+}
+
+/* ---------- Main / article ---------- */
+
+main { padding-bottom: 6rem; }
+
+.prose {
+  max-width: var(--read-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 0;
+}
+
+.prose > section { margin-bottom: 3.5rem; }
+
+.prose h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  letter-spacing: -0.005em;
+}
+
+.prose h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 2rem 0 0.75rem;
+}
+
+.prose h4 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.prose p {
+  margin: 0 0 1.15em;
+  color: var(--text);
+}
+
+.prose ul, .prose ol {
+  margin: 0 0 1.25em 1.2em;
+  padding: 0;
+}
+.prose li { margin-bottom: 0.4em; }
+
+.prose strong { color: var(--ink); }
+
+/* ---------- Wide blocks for diagrams ---------- */
+
+.wide {
+  max-width: var(--wide-width);
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.figure {
+  margin: 0 0 2rem;
+}
+
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 0.5rem;
+}
+
+.figure figcaption {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Pull quote ---------- */
+
+.pullquote {
+  border-left: 3px solid var(--accent);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 2rem 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+.pullquote cite {
+  display: block;
+  font-size: 0.85rem;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.75rem;
+  font-family: var(--sans);
+}
+
+/* ---------- Placeholder and status flags ---------- */
+
+.placeholder {
+  background: var(--paper-deep);
+  border: 1px dashed var(--accent);
+  color: var(--ink-soft);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+.placeholder::before {
+  content: "Placeholder  ·  ";
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.tentative {
+  background: var(--paper-deep);
+  border-left: 3px solid var(--muted);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.tentative::before {
+  content: "Tentative  ";
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.ai-content {
+  color: var(--ai-blue);
+}
+
+.status-flag {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 2px;
+  background: var(--accent);
+  color: #fff;
+  vertical-align: middle;
+}
+
+/* ---------- CTA button ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid var(--ink);
+  transition: background 180ms ease, color 180ms ease;
+}
+.btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+}
+.btn--ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+/* ---------- Team cards (Home) ---------- */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+.team-card {
+  text-align: left;
+}
+
+.team-card__photo {
+  aspect-ratio: 1 / 1;
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.team-card h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--ink);
+  font-weight: 500;
+  margin: 0 0 0.25rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.team-card__role {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+}
+
+/* ---------- Nav index on Home ---------- */
+
+.page-index {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem 0;
+  border-top: 1px solid var(--rule);
+}
+.page-index li {
+  border-bottom: 1px solid var(--rule);
+}
+.page-index a {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  text-decoration: none;
+  color: var(--ink);
+}
+.page-index a:hover { color: var(--accent); }
+.page-index__num {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--accent);
+  font-size: 1.05rem;
+}
+.page-index__title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.page-index__meta {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- Side-by-side pairs (before/after, card front/back) ---------- */
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+@media (max-width: 640px) {
+  .pair { grid-template-columns: 1fr; }
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  background: var(--paper-deep);
+}
+.site-footer p { margin: 0.25rem 0; }
+
+/* ---------- References list ---------- */
+
+.refs {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+.refs li {
+  padding-left: 2rem;
+  text-indent: -2rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* ---------- Page-load reveal ---------- */
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-header,
+.prose > section,
+.wide {
+  animation: rise 520ms ease-out both;
+}
+
+.page-header { animation-delay: 40ms; }
+.prose > section:nth-child(1) { animation-delay: 120ms; }
+.prose > section:nth-child(2) { animation-delay: 200ms; }
+.prose > section:nth-child(3) { animation-delay: 280ms; }
+.prose > section:nth-child(n+4) { animation-delay: 360ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-header, .prose > section, .wide { animation: none; }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Prototype: ESNConnect · Group 5 Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav__inner">
+    <a class="site-nav__brand" href="index.html">ESN Connect <em>· Group 5</em></a>
+    <ul class="site-nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research-question.html">Research</a></li>
+      <li><a href="systemic-design.html">Systemic Design</a></li>
+      <li><a href="literature-review.html">Literature</a></li>
+      <li><a href="prototype.html" aria-current="page">Prototype</a></li>
+      <li><a href="business-model.html">Business Model</a></li>
+      <li><a href="final-proposal.html">Final Proposal</a></li>
+      <li><a href="reflections.html">Reflections</a></li>
+      <li><a href="references.html">References</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Chapter 04</p>
+  <h1>Prototype: ESNConnect</h1>
+  <p class="page-header__lead">A working worker-facing portal for issuing and looking up shelter-network ID. Hosted on GitHub Pages. The ID card at the centre of the whole project.</p>
+</header>
+
+<main class="prose">
+
+  <section>
+    <h2>What it is</h2>
+    <p>ESN Connect is a prototype for a digital service coordination platform tied to the Edmonton Shelter Network ID card system. The prototype demonstrates what a functional shelter worker portal would look like if the ESN ID card were adopted at scale.</p>
+    <p><strong>Who it is for:</strong> shelter staff and frontline social service workers. This is a worker-facing tool. Unhoused people do not interact with this system directly. Workers use it to create client records, look up existing files, and coordinate referrals across participating organizations.</p>
+    <p><strong>What problem it solves:</strong> when someone experiencing homelessness arrives at a shelter without government-issued ID, workers cannot open a file, make referrals, or document service delivery in a way that satisfies government funding requirements. The ESN card breaks this cycle by creating a shelter-issued ID backed by a shared digital record. Workers at any participating organization can look up a client's history, add to their record, and make referrals, without requiring the client to re-prove their identity each time.</p>
+    <p style="margin-top:2rem;">
+      <a class="btn" href="#" target="_blank" rel="noopener">Open the live prototype <span aria-hidden="true">→</span></a>
+      <span class="placeholder" style="display:inline-block; margin-left:1rem;">Live ESNConnect URL to be confirmed and wired into this button.</span>
+    </p>
+  </section>
+
+  <section>
+    <h2>The funding problem</h2>
+    <p>The real barrier is not that shelters refuse to cooperate or that workers don't want to help. The barrier is structural: government funding requires documented proof of service delivery tied to ID verification. Shelters can only receive funding for people they can demonstrably prove they helped, and that proof requires a verifiable identity.</p>
+    <p>Without ID, the person cannot be entered into a funding-reportable case file. Services provided are "off the books" for funding purposes. The organization absorbs the cost with no reimbursement. Referrals to other funded organizations cannot be officially logged. This traps unhoused people without ID entirely outside the formal service system.</p>
+    <p>The funding model needs to change so that shelter staff can vouch for unhoused people to access services even without government-issued ID. The ESN card is one mechanism for this: a network-issued credential that serves as proof of identity and service engagement within the shelter system. For this to work at scale, provincial funders and Service Alberta would need to accept the ESN record as a valid basis for funding claims.</p>
+  </section>
+
+  <section>
+    <h2>Design rationale</h2>
+    <p>The prototype is worker-facing rather than client-facing. Unhoused people arrive at a shelter with a phone, without a phone, intoxicated, sober, in crisis, or stable. A client-facing app assumes a lot. A worker portal that a trained staff member operates is more realistic. The worker is the trusted interface with the client.</p>
+    <p>Five pages, each tied to a function a frontline worker actually performs: login and auth guard; new-client intake with photo upload and generated ID card; client lookup with service history; an agency directory linking real Edmonton organizations; and a standalone funding-problem explainer that breaks the fourth wall on what this prototype demonstrates and what it deliberately does not.</p>
+  </section>
+
+  <section>
+    <h2>The ESN ID card</h2>
+    <p>The physical card is the tangible intervention at the centre of the project. Shelter staff issue a laminated card at first intake. A QR code on the card links to the digital profile. Workers at any participating organization can scan, add service-history notes, and coordinate referrals.</p>
+  </section>
+
+</main>
+
+<section class="wide">
+  <div class="pair">
+    <figure class="figure">
+      <img src="assets/images/card-digital-front.png" alt="Digital mockup of the ESN Connect ID card, front side.">
+      <figcaption>Digital mockup · front</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="assets/images/card-digital-back.png" alt="Digital mockup of the ESN Connect ID card, back side.">
+      <figcaption>Digital mockup · back</figcaption>
+    </figure>
+  </div>
+  <div class="pair">
+    <figure class="figure">
+      <img src="assets/images/card-physical-front.jpeg" alt="Physical printed prototype of the ESN Connect ID card, front side.">
+      <figcaption>Physical prototype · front</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="assets/images/card-physical-back.jpeg" alt="Physical printed prototype of the ESN Connect ID card, back side.">
+      <figcaption>Physical prototype · back</figcaption>
+    </figure>
+  </div>
+</section>
+
+<main class="prose">
+
+  <section>
+    <h2>User journey</h2>
+    <p>The storyboard below walks through a typical first contact: a client arrives at a shelter without ID, a worker issues the ESN card through the prototype, the record is accessible at the next organization the client visits, and the service history travels with the person rather than being recreated from scratch.</p>
+  </section>
+
+</main>
+
+<section class="wide">
+  <figure class="figure">
+    <img src="assets/images/storyboard.png" alt="Six-panel storyboard of a client journey through the ESN Connect system.">
+    <figcaption>Six-panel storyboard of the user journey. Group 5, Week 10-11.</figcaption>
+  </figure>
+</section>
+
+<main class="prose">
+
+  <section>
+    <h2>Prototype walkthrough</h2>
+    <p>The live site has five pages. Each addresses a specific worker task.</p>
+    <h4>1. Login / landing</h4>
+    <p>Explains the system, describes who can access it, and presents a demo login form. Any non-empty credentials advance to the worker portal.</p>
+    <h4>2. New client</h4>
+    <p>Intake form with name, date of birth, photo upload, issuing shelter dropdown, and optional notes. On submit, the prototype generates a styled ID card display with a unique ESN identifier, issue date, issuing shelter, and a decorative QR placeholder.</p>
+    <h4>3. Client lookup</h4>
+    <p>Partial-name search against a small static demo database. Results display the client's card, expandable service history, and a placeholder "Add Referral" action.</p>
+    <h4>4. Agency directory</h4>
+    <p>Real Edmonton organizations tagged by service category: shelter, food, health, housing, employment, ID services. Each card links to the organization's website.</p>
+    <h4>5. Funding problem explainer</h4>
+    <p>A standalone page that breaks the fourth wall: this is a prototype, here is what it demonstrates, and here is the policy gap between this and something real.</p>
+    <div class="placeholder">Screenshots of each prototype page to be captured from the deployed site and added here. Not gating the skeleton.</div>
+  </section>
+
+  <section>
+    <h2>Community feedback (Gold Mine Matrix)</h2>
+    <p>Feedback on the prototype was gathered through a structured What Went Well / What to Improve / Surprises / Questions matrix. The image below is the Miro board synthesis used to drive the Week 12 refinements.</p>
+  </section>
+
+</main>
+
+<section class="wide">
+  <figure class="figure">
+    <img src="assets/images/gold-mine-matrix.jpg" alt="Miro Gold Mine Matrix with feedback organized into went-well, to-improve, surprises, and questions quadrants.">
+    <figcaption>Gold Mine Matrix feedback synthesis. Group 5, March 30, 2026.</figcaption>
+  </figure>
+</section>
+
+<footer class="site-footer">
+  <p>Group 5 · Jacob Meissner, Daniel Mantai, Lexi Match</p>
+  <p>RSCH3000 Applied Research Methods · Dr. Mary McNabb · Northern Alberta Institute of Technology · April 2026</p>
+</footer>
+
+</body>
+</html>
