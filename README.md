@@ -46,14 +46,3 @@ Editorial and academic-journal aesthetic. Deliberately distinct from ESNConnect 
 
 All tokens in `assets/css/styles.css`.
 
-## Status
-
-Skeleton plus ported content. Remaining placeholders:
-
-- Jacob's bio paragraph and headshot (index.html)
-- Lexi's bio paragraph and headshot (index.html)
-- Jacob's individual reflection paragraph, ~100 words (reflections.html)
-- Lexi's individual reflection paragraph, ~100 words (reflections.html)
-- Optional narrated pitch video (group decision by Apr 21, tentative block on final-proposal.html)
-
-Each placeholder is clearly labeled in the HTML with `<div class="placeholder">` blocks so the group can scan for what's missing.
